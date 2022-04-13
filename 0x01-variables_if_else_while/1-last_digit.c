@@ -10,12 +10,10 @@
 int main(void)
 {
 	int n;
+	int o;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
-	/* Declare a variable to hold the last number of n */
-	int o;
 
 	o = n % 10;
 
