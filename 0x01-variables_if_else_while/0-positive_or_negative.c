@@ -6,7 +6,7 @@
 /**
  * main - Programme entry point, gives the status of a number
  *
- * Returns: 0 if successful
+ * Return: 0 if successful
  */
 int main(void)
 {
