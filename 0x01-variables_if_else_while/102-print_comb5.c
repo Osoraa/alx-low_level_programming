@@ -15,8 +15,10 @@ int main(void)
 		{
 			for (j = i; j <= 57; j++)
 			{
-				for (jj = ii; jj <= 57; jj++)
+				for (jj = 48; jj <= 57; jj++)
 				{
+					if (i == j && ii == jj)
+						continue;
 					putchar(i);
 					putchar(ii);
 					putchar(32);
