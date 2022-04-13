@@ -3,7 +3,11 @@
 #include <time.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Programme entry point, gives the status of a number
+ *
+ * Returns: 0 if successful
+ */
 int main(void)
 {
 	int n;
