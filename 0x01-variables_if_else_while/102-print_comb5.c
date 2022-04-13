@@ -15,7 +15,12 @@ int main(void)
 		{
 			for (j = i; j <= 57; j++)
 			{
-				for (jj = ii + 1; jj <= 57; jj++)
+				if (j > i)
+					jj = 0;
+				else
+					jj = ii + 1;
+
+				for (; jj <= 57; jj++)
 				{
 					putchar(i);
 					putchar(ii);
