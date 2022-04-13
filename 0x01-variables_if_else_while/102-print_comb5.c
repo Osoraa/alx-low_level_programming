@@ -15,13 +15,10 @@ int main(void)
 		{
 			for (j = i; j <= 57; j++)
 			{
-				if (j > i)
-					jj = 0;
-				else
-					jj = ii + 1;
-
-				for (; jj <= 57; jj++)
+				for (jj = 0; jj <= 57; jj++)
 				{
+					if (i == j && jj <= ii)
+						continue;
 					putchar(i);
 					putchar(ii);
 					putchar(32);
