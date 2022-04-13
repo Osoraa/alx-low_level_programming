@@ -14,5 +14,5 @@ int main(void)
 		putchar(i);
 	}
 	putchar(0xA);
-	return (0x30);
+	return (0x0);
 }
