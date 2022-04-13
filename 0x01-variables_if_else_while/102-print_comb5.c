@@ -15,7 +15,7 @@ int main(void)
 		{
 			for (j = i; j <= 57; j++)
 			{
-				for (jj = 0; jj <= 57; jj++)
+				for (jj = 48; jj <= 57; jj++)
 				{
 					if (i == j && jj <= ii)
 						continue;
