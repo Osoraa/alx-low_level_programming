@@ -19,6 +19,6 @@ int main(void)
 		} else
 			break;
 	}
-	putchar(10); 
+	putchar(10);
 	return (0);
 }
