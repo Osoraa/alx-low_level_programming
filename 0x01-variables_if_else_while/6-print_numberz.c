@@ -11,7 +11,7 @@ int main(void)
 
 	for (; i <= 0x39; i++)
 	{
-		printf("%c", i);
+		putchar(i);
 	}
 	putchar(0xA);
 	return (0x30);
