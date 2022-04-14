@@ -8,5 +8,5 @@
  * Return: Always returns 0 if successful
  */
 int _putchar(char c);
-
+void print_alphabet(void);
 #endif	/* _MAIN_H_ */
