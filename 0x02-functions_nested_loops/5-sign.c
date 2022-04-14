@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_sign - Prints the sign/coefficient of a number, 0 if the number is zero.
+ * print_sign - Prints the sign/coefficient of a number, 0 if number is zero.
  * @n: number to check for sign coefficient.
  *
  * Return: 1 if positive, -1 if negative and 0 otherwise.
