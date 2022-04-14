@@ -1,19 +1,6 @@
-/* HEaders for work in this workspace */
-#ifndef PUTCHAR_H
-#define PUTCHAR_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
+#include "_putchar.c"
+//int _putchar(char c);
 
-#include <unistd.h>
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-
-#endif
+#endif	/* _MAIN_H_ */
