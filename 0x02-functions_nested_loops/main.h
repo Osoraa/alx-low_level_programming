@@ -2,12 +2,10 @@
 #define _MAIN_H_
 
 /**
- * main - Function declarations.
- * @args: values to be used in the functions.
+ * _putchar - Function declarations.
+ * @c: Prints value c to stdout.
  *
- * Return: int returns 1 if successful
- * void returns none
- * char may return the character it worked on, depends.
+ * Return: Always returns 0 if successful
  */
 int _putchar(char c);
 
