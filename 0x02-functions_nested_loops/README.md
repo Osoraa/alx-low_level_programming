@@ -10,4 +10,4 @@ It's kinda tedious adding, commiting and pushing every single time.
 
 ##### I'd appreciate anyone's advice on my work so far.
 
-###### Here's my telegram if you'd wanna reachout. [telegram](https://t.me/Osoraa) 
+###### Here's my telegram if you'd wanna reachout. [telegram](https://t.me/Osoraa)
