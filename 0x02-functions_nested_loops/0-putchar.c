@@ -3,7 +3,7 @@
 /**
  * main - Program entry point - Prints the string "_putchar"
  *
- * Returns: 0 if successful, wouldn't compile otherwise
+ * Return: 0 if successful, wouldn't compile otherwise
  */
 int main(void)
 {
