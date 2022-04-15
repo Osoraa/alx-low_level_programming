@@ -13,7 +13,7 @@ void times_table(void)
 	{
 		_putchar('0');
 
-		for (column = 0; column <= 9; column++)
+		for (column = 1; column <= 9; column++)
 		{
 			int multiple = row * column;
 
