@@ -6,5 +6,7 @@
  *
  * Return: None.
  */
-void main(void);
+int main(void);
 int _isupper(int c);
+
+#endif
