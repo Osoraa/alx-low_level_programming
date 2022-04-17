@@ -39,7 +39,7 @@ int fizzBuzz(int num)
 			printf("Buzz");
 		else
 			printf("%d", count);
-		
+
 		if (count < 100)
 			putchar(' ');
 		count++;
