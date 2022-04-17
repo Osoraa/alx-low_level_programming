@@ -32,18 +32,16 @@ int fizzBuzz(int num)
 	{
 		if (count % 3 == 0)
 		{
+			printf("Fizz");
 			if (count % 5 == 0)
-			{
-				printf("FizzBuzz ");
-				count++;
-				continue;
-			}
-			printf("Fizz ");
+				printf("Buzz");
 		} else if (count % 5 == 0)
-			printf("Buzz ");
+			printf("Buzz");
 		else
-			printf("%d ", count);
-
+			printf("%d", count);
+		
+		if (count < 100)
+			putchar(' ');
 		count++;
 	}
 
