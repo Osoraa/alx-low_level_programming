@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 
+/* function declaration */
+int fizzBuzz(int num);
+
 /**
  * main - Program entry point.
  *
@@ -8,7 +11,7 @@
  */
 int main(void)
 {
-	fizzBuzz();
+	fizzBuzz(100);
 
 	return (0);
 }
@@ -17,15 +20,12 @@ int main(void)
  * fizzBuzz - Prints Fizz for multiples of 3, Buzz for multiples of 5,
  * and FizzBuzz for multiples of both 3 nd 5.
  *
- * @num: number to stop. defaults to 100 is none is passed.
+ * @num: number to stop at.
  *
  * Return: 0.
  */
-int fizzBuzz(int *num)
+int fizzBuzz(int num)
 {
-	if (*num == '\0')
-		*num = 100;
-	
 	int count = 1;
 
 	while (count <= num)
@@ -47,6 +47,7 @@ int fizzBuzz(int *num)
 		count++;
 	}
 
+	putchar('\n');
 	return (0);
 }
 
