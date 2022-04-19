@@ -15,5 +15,5 @@ int main(void)
 		text++;
 	}
 
-	return (0);
+	return (1);
 }
