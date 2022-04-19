@@ -41,10 +41,9 @@ void print_times_table(int num)
 				}
 
 				_putchar('0' + multiple % 10);
-
-				if (column == num)
-					_putchar('\n');
 			}
+
+			_putchar('\n');
 		}
 	}
 }
