@@ -8,7 +8,7 @@
 int main(void)
 {
 	long int num = 1, prev = 1, temp;
-	char count = 0;
+	char count = 1;
 
 	while (count < 50)
 	{
