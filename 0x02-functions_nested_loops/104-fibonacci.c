@@ -7,19 +7,19 @@
  */
 int main(void)
 {
-	long double num = 1, prev = 1, temp;
+	unsigned long double num = 1, prev = 1, temp;
 	char count = 1;
 
 	while (count < 98)
 	{
-		printf("%.0Lf, ", num);
+		printf("%.0ld, ", num);
 		temp = num;
 		num += prev;
 		prev = temp;
 		count++;
 	}
 
-	printf("%.0Lf\n", num);
+	printf("%.0ld\n", num);
 
 	return (0);
 }
