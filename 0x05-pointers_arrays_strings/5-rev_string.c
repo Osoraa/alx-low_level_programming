@@ -9,13 +9,12 @@
 void rev_string(char *s)
 {
 	int end = 0, start, length;
+	char *rev;
 
 	while (*(s + end) != '\0')
 		end++;
 
 	length = end;
-
-	char rev[length];
 
 	for (start = 0; start < length; start++)
 	{
@@ -23,13 +22,11 @@ void rev_string(char *s)
 		end--;
 	}
 
-	rev[length] = '\0';
+	*(rev + length) = '\0';
 
-	int i;
-
-	for (i = 0; *(rev + i) != '\0'; i++)
+	for (start = 0; *(rev + start) != '\0'; start++)
 	{
-		*(s + i) = *(rev + i);
+		*(s + start) = *(rev + start);
 	}
 
 	*(s + length) = '\0';
