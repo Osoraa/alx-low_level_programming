@@ -13,9 +13,11 @@ void print_array(int *a, int n)
 
 	for (i = 0; i < n; i++)
 	{
-		if (i == n - 1)			/* If value is the last in the array, */
-			printf("%d\n", a[i]);	/* print value followed by a new line */
+		if (i == n - 1)			/* If value is the last in the array, print value only */
+			printf("%d", a[i]);
 		else
-			printf("%d, ", a[i]);	/* else, print value followed by comma and space */
+			printf("%d, ", a[i]);	/* else, print value followed by comma and space. */
 	}
+
+	putchar('\n'); 				/* Print new line */
 }
