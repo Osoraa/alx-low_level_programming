@@ -10,13 +10,14 @@
 void rev_string(char *s)
 {
 	int end = 0, start, length;
+	char *rev;
 
 	while (*(s + end) != '\0')
 		end++;
 
 	length = end;
 
-	char *rev = malloc(length * sizeof(char));
+	rev = malloc(length * sizeof(char));
 
 	for (start = 0; start < length; start++)
 	{
