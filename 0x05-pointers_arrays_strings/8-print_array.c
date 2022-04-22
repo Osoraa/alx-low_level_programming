@@ -19,5 +19,5 @@ void print_array(int *a, int n)
 			printf("%d, ", a[i]);	/* else, print value followed by comma and space. */
 	}
 
-	putchar('\n'); 				/* Print new line */
+	putchar('\n');				/* Print new line */
 }
