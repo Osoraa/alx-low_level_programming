@@ -13,7 +13,10 @@ void puts_half(char *str)
 	while (str[end] != '\0')
 		end++;
 
-	end /= 2;
+	if (end % 2)
+		end = (end - 1) / 2;
+	else
+		end /= 2;
 
 	while (str[end] != '\0')
 		printf("%c", str[end++]);
