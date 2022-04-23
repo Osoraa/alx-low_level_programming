@@ -9,5 +9,6 @@
  * Return: Always 0.
  */
 int main(void);
+char *_strcat(char *dest, char *src);
 
 #endif	/* _MAIN_H_ */
