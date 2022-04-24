@@ -2,6 +2,7 @@
 #define _MAIN_H_
 
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main - Program entry point.
@@ -15,5 +16,6 @@ char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
 char *string_toupper(char *string);
+char *cap_string(char *string);
 
 #endif	/* _MAIN_H_ */
