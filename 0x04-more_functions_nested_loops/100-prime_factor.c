@@ -24,14 +24,13 @@ int main(void)
  */
 long largestPrimeFactor(long num)
 {
-	long i;
+	long i = 2;
 
-	for (i = 2; num > 1; i++)
+	for (i = 2; i < num; i++)
 	{
-		if (num  == i)
-			return (num);
-
-		while (!(num % i))
+		while (num % i == 0)
 			num /= i;
 	}
+
+	return (num);
 }
