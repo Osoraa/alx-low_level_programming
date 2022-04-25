@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /* function definitions */
-long int largestPrimeFactor(long int num);
+long largestPrimeFactor(long num);
 
 /**
  * main - Program entry point.
@@ -10,31 +10,10 @@ long int largestPrimeFactor(long int num);
  */
 int main(void)
 {
-	//int large = largestPrimeFactor(1231952);
-	long int large = largestPrimeFactor(612852475143);
+	long large = largestPrimeFactor(612852475143);
 
 	printf("%ld\n", large);
 	return (0);
-}
-
-/**
- * isPrime - Checks for prime number
- * @num - integer to check.
- *
- * Return: 1 if num is a prime, 0 otherwise.
- */
-int isPrime(long int num)
-{
-	int i = 2;
-
-	while (i < num)
-	{
-		if (num % i == 0)
-			return (0);
-		i++;
-	}
-
-	return (1);
 }
 
 /**
@@ -43,19 +22,16 @@ int isPrime(long int num)
  *
  * Return: The largest prime factor.
  */
-long int largestPrimeFactor(long int num)
+long largestPrimeFactor(long num)
 {
-	long int prime;
+	long i;
 
-	for (prime = 2; prime < num; prime++)
+	for (i = 2; num > 1; i++)
 	{
-		if (!(isPrime(prime)))
-			continue;
-
-		if (num == prime)
+		if (num  == i)
 			return (num);
 
-		while (!(num % prime))
-			num /= prime;
+		while (!(num % i))
+			num /= i;
 	}
 }
