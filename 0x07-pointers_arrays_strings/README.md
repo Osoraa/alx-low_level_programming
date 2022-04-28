@@ -6,6 +6,6 @@ Only very important solutions to my understanding would have specific commit mes
 
 It's kinda tedious adding, commiting and pushing every single time.
 
-##### I'd appreciate anyone's advice on my work so far.
+##### I'd appreciate anyone's advice on my work so far
 
 ###### Here's my telegram if you'd want to reachout. [telegram](https://t.me/Osoraa) and [Twitter](https://twitter.com/_Osoraa)

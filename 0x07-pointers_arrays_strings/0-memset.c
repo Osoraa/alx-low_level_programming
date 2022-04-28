@@ -11,7 +11,6 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	/* Step 1: Go into the memory up until n bytes. */
 	size_t i = 0;
 
 	while (i < n)
