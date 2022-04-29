@@ -12,27 +12,20 @@ char *_strstr(char *haystack, char *needle)
 {
 	short i;
 
-	/* Find first letter of needle in haystack,
-	 * and mark that as the starting point. */
-
-	/* Check if all the letters in needle follow the letter found.
-
-	/* If they do, return the pointer to the lettter found.
-	 * else, find the next occurence of the first letter in needle.
-
-	Return null if none is found.*/
-
-	for (i = 0; haystack[i] || needle[i]; i++)
+	for (i = 0; haystack[i] != '\0' && needle[i] != '\0'; i++)
 	{
 		if (haystack[i] == needle[i])
 			continue;
 
-		i = -1;
 		haystack++;
+		i = -1;
 	}
 
-	if (*haystack == *needle)
-		return (haystack);
+	for (i = 0; needle[i]; i++)
+	{
+		if (haystack[i] != needle[i])
+			return ('\0');
+	}
 
-	return ('\0');
+	return (haystack);
 }
