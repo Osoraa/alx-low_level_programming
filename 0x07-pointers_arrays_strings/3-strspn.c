@@ -11,7 +11,7 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	size_t count = 0;
-	short i; 
+	short i;
 
 	/* Check if first letter in s is in accept string */
 	for (i = 0; accept[i] != '\0'; i++)
