@@ -33,7 +33,7 @@ int is_prime_number(int n)
 		return (0);
 
 	/* Invalid if divisible by 2 but not 2. */
-	if (n % 2 == 0 )
+	if (n % 2 == 0)
 	{
 		if (n == 2)
 			return (1);
