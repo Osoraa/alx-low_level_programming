@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** recursion_sqrt - Finds the square root of a number.
+/**
+ * recursion_sqrt - Finds the square root of a number.
  * @i: Potential answer.
  * @n: Target number.
  * Return: i if its a root on n and is natural, else -1.
