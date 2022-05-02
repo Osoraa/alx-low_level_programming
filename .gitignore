@@ -1,6 +1,8 @@
 # Added by me
-main.c
 .vscode
+_putchar.c
+temp
+test.c
 
 # Prerequisites
 *.d
