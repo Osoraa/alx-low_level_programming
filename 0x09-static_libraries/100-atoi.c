@@ -8,6 +8,6 @@
  */
 int _atoi(char *s)
 {
-	s += 1;
+	(void) s;
 	return (0);
 }
