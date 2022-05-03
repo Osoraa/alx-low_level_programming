@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - Program entry point.
@@ -11,20 +12,26 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int i, j, sum = 0;
 
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
-		if (!(atoi(argv[i])))
+		/* isdigit checks each char of a string if its a number representation */
+		j = 0;
+		while (argv[i][j] != '\0')
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
 
 		if (atoi(argv[i]) < 1)
