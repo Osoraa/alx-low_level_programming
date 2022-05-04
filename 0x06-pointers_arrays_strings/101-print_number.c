@@ -6,10 +6,18 @@
  *
  * Return: None.
  */
-void print_number(long n)
+void print_number(int n)
 {
+	int flow = 0;
+
 	if (n < 0)
 	{
+		if (n == INT_MIN)
+		{
+			n++;
+			flow = 1;
+		}
+
 		_putchar('-');
 		n *= -1;
 	}
@@ -19,6 +27,6 @@ void print_number(long n)
 	else
 	{
 		print_number(n / 10);
-		_putchar(n % 10 + 48);
+		_putchar(n % 10 + 48 + flow);
 	}
 }
