@@ -9,7 +9,8 @@
  */
 int _atoi(char *s)
 {
-	int num = 0, negate = 1;
+	double num = 0;
+	int negate = 1;
 
 	for (; *s; s++)
 	{
