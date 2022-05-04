@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
  * _atoi - Converts a string to an integer.
@@ -8,5 +9,24 @@
  */
 int _atoi(char *s)
 {
-	return (0);
+	int num = 0, negate = 1;
+
+	for (; *s; s++)
+	{
+		if (*s == '-')
+		{
+			negate *= -1;
+			continue;
+		}
+		if (!(isdigit(*s)))
+		{
+			if (num > 0)
+				break;
+			continue;
+		}
+
+		num = (10 * num + (*s - 48));
+	}
+
+	return (num * negate);
 }
