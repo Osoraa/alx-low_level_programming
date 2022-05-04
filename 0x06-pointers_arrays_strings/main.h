@@ -20,6 +20,6 @@ char *string_toupper(char *string);
 char *cap_string(char *string);
 char *leet(char *string);
 char *rot13(char *string);
-void print_number(int n);
+void print_number(long n);
 
 #endif /* _MAIN_H_ */
