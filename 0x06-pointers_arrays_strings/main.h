@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <ctype.h>
+#include <limits.h>
 
 /**
  * main - Program entry point.
@@ -20,6 +21,6 @@ char *string_toupper(char *string);
 char *cap_string(char *string);
 char *leet(char *string);
 char *rot13(char *string);
-void print_number(long n);
+void print_number(int n);
 
 #endif /* _MAIN_H_ */
