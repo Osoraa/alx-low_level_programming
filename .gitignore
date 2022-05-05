@@ -3,6 +3,7 @@
 _putchar.c
 temp
 test.c
+demo.c
 
 # Prerequisites
 *.d
