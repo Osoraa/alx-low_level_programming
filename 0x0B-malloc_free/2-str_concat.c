@@ -10,35 +10,37 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	size_t i;
+	size_t i, len_1, len_2;
 	char *arr;
 
 	if (s1 != NULL)
-	{
-		if (s2 != NULL)
-			arr = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
-		else
-			arr = malloc(sizeof(char) * strlen(s1) + 1);
-	}
+		len_1 = strlen(s1);
 	else
-		return (NULL);
+		len_1 = 0;
+
+	if (s2 != NULL)
+		len_2 = strlen(s2);
+	else
+		len_2 = 0;
+
+	arr = malloc(sizeof(char) * (len_1 + len_2 + 1));
 
 	if (arr == NULL)
 		return (NULL);
 
-	for (i = 0; i < strlen(s1); i++)
+	for (i = 0; i < len_1; i++)
 		arr[i] = s1[i];
 
-	if (!(strlen(s2)))
+	if (!(len_2))
 	{
 		arr[i] = '\0';
 		return (arr);
 	}
 
-	for (i = 0; i < strlen(s2); i++)
-		arr[i + strlen(s1)] = s2[i];
+	for (i = 0; i < len_2; i++)
+		arr[i + len_1] = s2[i];
 
-	arr[i + strlen(s1)] = '\0';
+	arr[i + len_1] = '\0';
 
 	return (arr);
 }
