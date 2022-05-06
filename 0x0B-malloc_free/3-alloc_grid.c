@@ -10,15 +10,12 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **arr = calloc(width * height, sizeof(int));
+	int **arr, i;
 
-	/* if (width < 1 || height < 1)
-		return (NULL); */
+	arr = malloc(sizeof(int *) * height);
 
-	/* **arr = calloc(width * height, sizeof(int)); */
-
-	if (*arr == NULL)
-		return (NULL);
+	for (i = 0; i < width; i++)
+		arr[i] = calloc(width, sizeof(int));
 
 	return (arr);
 }
