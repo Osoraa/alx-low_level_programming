@@ -1,42 +1,39 @@
-#include "main.h"
+#include <stdlib.h>
 
 /**
- * alloc_grid - returns a pointer to a 2-D array of integers.
- *
- * @width: Width of the array.
- * @height: Height of the array.
- *
- * Return: Pointer to a 2D array, NULL on calloc error or either args <= 0.
+ * **alloc_grid - returns a pointer to a 2 dimensional array of integers.
+ * @width: int
+ * @height: int
+ * Return: 2d array
  */
+
 int **alloc_grid(int width, int height)
 {
-	int **arr, i;
+	int **tab, i, j;
+	tab = malloc(sizeof(*tab) * height);
 
-	/* Return NULL if width or heigth is less than 1. */
-	if (width < 1 || height < 1)
+	if (width <= 0 || height <= 0 || tab == 0)
 		return (NULL);
 
-	/* Allocate row pointers, return NULL on error. */
-	arr = malloc(sizeof(*arr) * height);
-	if (arr == NULL)
-		return (NULL);
-
-	/* Allocate and Initialize each columns in each row. */
-	for (i = 0; i < height; i++)
+	else
 	{
-		arr[i] = calloc(width, sizeof(**arr));
-
-		if (arr[i] == NULL)
+		for (i = 0; i < height; i++)
 		{
-			/* Free everything on malloc failure. */
-			/* Current malloc failed, no need to free null ptr. */
-			while (i--)
-				free(arr[i]);
+			tab[i] = malloc(sizeof(**tab) * width);
 
-			free(arr);
-			return (NULL);
+			if (tab[i] == 0)
+			{
+				/*Free everything if malloc fails*/
+				while (i--)
+					free(tab[i]);
+				free(tab);
+				return (NULL);
+			}
+
+			for (j = 0; j < width; j++)
+				tab[i][j] = 0;
 		}
 	}
 
-	return (arr);
+	return (tab);
 }
