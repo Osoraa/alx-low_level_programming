@@ -3,8 +3,8 @@
 /**
  * free_grid - Frees a Two-dimensional array.
  *
- * grid - Two dimentsional array to free.
- * height - height of the 2-dimensional array.
+ * @grid: Two dimentsional array to free.
+ * @height: Height of the 2-dimensional array.
  *
  * Return: None.
  */
