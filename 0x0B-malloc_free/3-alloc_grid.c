@@ -10,40 +10,29 @@
  */
 int **alloc_grid(int width, int height)
 {
-	int **arr, i, j;
+	int **arr, i;
 
 	/* Return NULL if width or heigth is less than 1. */
 	if (width < 1 || height < 1)
 		return (NULL);
 
 	/* Allocate row pointers, return NULL on error. */
-	arr = malloc(sizeof(int *) * height);
+	arr = malloc(sizeof(*arr) * height);
 	if (arr == NULL)
 		return (NULL);
 
 	/* Allocate and Initialize each columns in each row. */
 	for (i = 0; i < height; i++)
 	{
-		arr[i] = calloc(width, sizeof(int));
+		arr[i] = calloc(width, sizeof(**arr));
 
-		/*
 		if (arr[i] == NULL)
 		{
-			for (j = 0; j <= i; j++)
-				free(arr[j]);
+			/* Free everything on malloc failure. */
+			/* Current malloc failed, no need to free null ptr. */
+			while (i--)
+				free(arr[i]);
 
-			free(arr);
-			return (NULL);
-		}
-		*/
-	}
-
-	for (i = 0; i < height; i++)
-	{
-		if (arr[i] == NULL)
-		{
-			for (j = 0; j < height; j++)
-				free(arr[j]);
 			free(arr);
 			return (NULL);
 		}
