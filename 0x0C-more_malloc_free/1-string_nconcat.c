@@ -22,7 +22,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	n = (n > len_s2) ? len_s2 : n;
 
 	/* Allocate memory for new string */
-	str = malloc(sizeof *str * (len_s1 + n + 1));
+	str = malloc((len_s1 + n + 1));
 	if (str == NULL)
 		return (NULL);
 
