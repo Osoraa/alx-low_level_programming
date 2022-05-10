@@ -27,7 +27,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	/* Copy s1 and n bytes of s2 into new string */
-	strcpy(str, s1);
+	if (len_s1 != 0)
+		strcpy(str, s1);
+
 	for (i = 0; i < n; i++)
 		str[i + len_s1] = s2[i];
 
