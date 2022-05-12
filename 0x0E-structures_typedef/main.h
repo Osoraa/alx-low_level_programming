@@ -6,6 +6,7 @@
 #include <string.h>
 #include <limits.h>
 #include <ctype.h>
+#include "dog.h"
 
 /**
  * main - Program entry point.
