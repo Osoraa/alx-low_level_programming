@@ -1,8 +1,6 @@
 #ifndef DOG
 #define DOG
 
-#include "main.h"
-
 /**
  * struct dog - A dog class
  *
