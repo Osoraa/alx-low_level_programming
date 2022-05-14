@@ -1,10 +1,10 @@
-#include "main.h"
+#include "function_pointers.h"
 
 /**
  * print_name - A function that prints it's name.
  *
  * @name: Name of the function.
- * @f: pointer to the function.
+ * @f: Pointer to the function.
  *
  * Return: None.
  */
