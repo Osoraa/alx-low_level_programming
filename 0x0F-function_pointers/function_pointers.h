@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _F_POINTERS_H_
+#define _F_POINTERS_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,4 +15,4 @@
 int main(void);
 void print_name(char *name, void (*f)(char *));
 
-#endif /* _MAIN_H_ */
+#endif /* _F_POINTERS_H_ */
