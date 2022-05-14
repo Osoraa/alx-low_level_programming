@@ -1,4 +1,4 @@
-# Solutions to the "0x0E structures typedef" set of tasks
+# Solutions to the "0x0F function Pointers" set of tasks
 
 ## Strategy
 
