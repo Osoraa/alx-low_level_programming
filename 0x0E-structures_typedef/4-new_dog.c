@@ -7,6 +7,8 @@
  * @name: name of the new dog.
  * @age: New dog's age in human years.
  * @owner: Owner of the new dog.
+ *
+ * Return: Pointer to new_dog or NULL on error.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
