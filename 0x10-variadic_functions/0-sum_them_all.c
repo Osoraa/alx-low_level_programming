@@ -10,8 +10,8 @@ int sum_them_all(const unsigned int n, ...)
 {
 	int sum;
 	size_t i;
-
 	va_list next;
+
 	va_start(next, n);
 
 	if (!(n))
