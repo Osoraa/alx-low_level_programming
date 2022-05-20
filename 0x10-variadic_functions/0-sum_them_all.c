@@ -1,4 +1,4 @@
-#include "main.h"
+#include "variadic_functions.h"
 
 /**
  * sum_them_all - Returns the sum of values in a variadic function.
