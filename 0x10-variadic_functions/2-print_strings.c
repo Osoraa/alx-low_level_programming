@@ -30,7 +30,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 				buffer = va_arg(next, char *);
 			}
-		} else {
+		} else
+		{
 			for (i = 0; i < n - 1; i++)
 			{
 				if (buffer)
