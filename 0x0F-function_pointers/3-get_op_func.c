@@ -17,9 +17,11 @@ int (*get_op_func(char *s))(int, int)
 	    {NULL, NULL}};
 	int i = 0;
 
-	while (ops[i].op != NULL && ops[i].op != NULL)
+	printf("lmao");
+
+	while (ops[i].op && ops[i].f)
 	{
-		if (argv[2] == ops[i].op)
+		if (s == ops[i].op)
 			return (ops[i].f);
 		i++;
 	}
