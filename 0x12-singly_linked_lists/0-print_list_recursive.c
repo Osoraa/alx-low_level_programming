@@ -2,7 +2,7 @@
 
 /**
  * print_list - Prints all the elements of a list_t recursively.
- * @h: list to print it's elements.
+ * @h: beginning of list.
  *
  * Return: Number of nodes in the linked list.
  */
