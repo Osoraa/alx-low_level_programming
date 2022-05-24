@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * add_node - Inserts a new node at the beginning of a linked list recursively.
+ * add_node_end - Uses a recursive method in appending a new node.
  *
  * @head: List beginning.
  * @str: String to populate new node with.
@@ -14,7 +14,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	/* Recursive case to find end of list */
 	if (*head)
-		return(add_node_end(&((*head)->next), str));
+		return (add_node_end(&((*head)->next), str));
 
 	node = malloc(sizeof(list_t));
 	if (!node)
