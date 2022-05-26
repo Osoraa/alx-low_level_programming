@@ -4,7 +4,7 @@
  * add_nodeint - Adds a node at the beginning of a linked list.
  *
  * @head: Pointer to list beginning.
- * @n: Value to insert in new node data field.
+ * @n: Value to insert in new node's data field.
  *
  * Return: Pointer to new node.
  */
