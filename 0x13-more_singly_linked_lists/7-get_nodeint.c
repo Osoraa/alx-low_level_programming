@@ -18,6 +18,14 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	return (get_intnode_at_index(head, index));
 }
 
+/**
+ * get_intnode_at_index - Does the recursive part of this task.
+ *
+ * @head: As defined above.
+ * @index: As defined above also.
+ *
+ * Return: node.
+ */
 listint_t *get_intnode_at_index(listint_t *head, size_t index)
 {
 	if (!index)
