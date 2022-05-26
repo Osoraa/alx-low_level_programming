@@ -2,7 +2,7 @@
 
 /**
  * free_listint2 - Frees all the nodes of an int list.
- * @head: List beginning.
+ * @head: Pointer to a pointer to the List beginning.
  *
  * Return: None.
  */
