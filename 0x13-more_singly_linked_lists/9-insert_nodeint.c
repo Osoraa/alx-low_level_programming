@@ -55,7 +55,8 @@ size_t listint_len(const listint_t *h)
  *
  * Return: Node's address or NULL on failure.
  */
-listint_t *insert_intnode_at_index(listint_t *head, listint_t *prev, size_t idx, int n)
+listint_t *insert_intnode_at_index(listint_t *head, listint_t *prev,
+ size_t idx, int n)
 {
 	listint_t *node;
 
