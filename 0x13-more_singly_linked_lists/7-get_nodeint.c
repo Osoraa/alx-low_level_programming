@@ -12,7 +12,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	size_t len = listint_len(head);
 
-	if (!head || index > len - 1)
+	if (!head || index >= len)
 		return (NULL);
 
 	return (get_intnode_at_index(head, index));
