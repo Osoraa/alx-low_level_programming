@@ -48,7 +48,7 @@ size_t listint_len(const listint_t *h)
  * locate_and_delete - Deletes node at index.
  *
  * @head: List beginning.
- * @prev: previous node preceding current indexed node.
+ * @prev: Previous node preceding current indexed node.
  * @index: Index of node to delete.
  *
  * Return: Pointer to deleted node.
