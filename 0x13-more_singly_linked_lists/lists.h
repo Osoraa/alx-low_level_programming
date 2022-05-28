@@ -53,6 +53,6 @@ int sum_listint(listint_t *head);
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);
 listint_t *insert_intnode_at_index(listint_t *head, size_t idx, int n);
 int delete_nodeint_at_index(listint_t **head, unsigned int index);
-listint_t *locate_and_delete(listint_t *head, size_t index);
+listint_t *locate_and_delete(listint_t *head, listint_t *prev, size_t index);
 
 #endif /* _LISTS_H_ */
