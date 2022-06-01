@@ -13,7 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *node;
 
-	if (!head || idx >= listint_len(*head) || (int) idx < 0)
+	if (idx >= listint_len(*head) || (int) idx < 0)
 		return (NULL);
 
 	if (idx != 0)
