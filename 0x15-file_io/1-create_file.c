@@ -13,19 +13,19 @@ int create_file(const char *filename, char *text_content)
 	ssize_t fildes, write_len;
 
 	if (!filename)
-		exit(-1);
+		return (-1);
 
 	fildes = open(filename, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
 	if (fildes == -1)
-		exit(-1);
+		return (-1);
 
 	if (text_content)
 	{
 		write_len = write(fildes, text_content, strlen(text_content));
 		if (write_len == -1)
-			exit(-1);
+			return (-1);
 	}
-
 	close(fildes);
+
 	return (1);
 }
