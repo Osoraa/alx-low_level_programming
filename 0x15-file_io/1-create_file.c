@@ -15,7 +15,7 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		exit(-1);
 
-	fildes = open(filename, O_CREAT | O_WRONLY, 00600);
+	fildes = open(filename, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
 	if (fildes == -1)
 		exit(-1);
 
