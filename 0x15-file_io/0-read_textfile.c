@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (len_rd == -1)
 		return (0);
 
-	printf("%s", buffer);
+	dprintf(STDOUT_FILENO, "%s", buffer);
 	free(buffer);
 	close(fildes);
 
