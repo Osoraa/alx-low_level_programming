@@ -20,7 +20,7 @@ int create_file(const char *filename, char *text_content)
 		exit(-1);
 
 	if (text_content)
-		write(fildes, text_content, strlen(text_content) + 1);
+		write(fildes, text_content, strlen(text_content));
 
 	close(fildes);
 	return (1);
