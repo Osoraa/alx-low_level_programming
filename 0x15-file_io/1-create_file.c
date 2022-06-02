@@ -10,7 +10,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	ssize_t fildes;
+	ssize_t fildes, write_len;
 
 	if (!filename)
 		exit(-1);
@@ -20,7 +20,11 @@ int create_file(const char *filename, char *text_content)
 		exit(-1);
 
 	if (text_content)
-		write(fildes, text_content, strlen(text_content));
+	{
+		write_len = write(fildes, text_content, strlen(text_content));
+		if (write_len == -1)
+			exit(-1);
+	}
 
 	close(fildes);
 	return (1);
