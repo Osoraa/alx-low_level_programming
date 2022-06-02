@@ -27,6 +27,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	printf("%s", buffer);
 	free(buffer);
+	close(fildes);
 
 	return (len_rd);
 }
