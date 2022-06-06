@@ -52,7 +52,7 @@ int _cp(char *file_from, char *file_to)
 				"Error: Can't write to file %s\n", file_to);
 			return (99);
 		}
-	} while (strlen(buffer) == 1024 );
+	} while (strlen(buffer) == 1024);
 
 	if (close(from_file))
 	{
