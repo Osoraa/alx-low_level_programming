@@ -10,9 +10,8 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fildes;
+	ssize_t fildes, read_len;
 	char *buffer = malloc(letters + 1);
-	ssize_t len_rd;
 
 	if (!filename)
 		return (0);
@@ -21,13 +20,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (fildes == -1)
 		return (0);
 
-	len_rd = read(fildes, buffer, letters);
-	if (len_rd == -1)
+	read_len = read(fildes, buffer, letters);
+	if (read_len == -1)
 		return (0);
 
 	dprintf(STDOUT_FILENO, "%s", buffer);
 	free(buffer);
 	close(fildes);
 
-	return (len_rd);
+	return (read_len);
 }
