@@ -12,10 +12,9 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
-
 	return (_cp(argv[1], argv[2]));
 }
 
@@ -30,8 +29,7 @@ int main(int argc, char *argv[])
 int _cp(char *file_from, char *file_to)
 {
 	ssize_t from_file, to_file, read_len, write_len;
-	char *buffer = malloc(1024);
-
+	char *buffer = malloc(1025);
 
 	from_file = open(file_from, O_RDONLY);
 	to_file = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -49,7 +47,7 @@ int _cp(char *file_from, char *file_to)
 		if (to_file == -1 || write_len == -1)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't write to file %s\n", file_to);
+				"Error: Can't write to 	%s\n", file_to);
 			return (99);
 		}
 	} while (strlen(buffer) == 1024);
