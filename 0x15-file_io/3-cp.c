@@ -28,44 +28,46 @@ int main(int argc, char *argv[])
  */
 int _cp(char *file_from, char *file_to)
 {
-	ssize_t from_file, to_file, read_len, write_len;
-	char *buffer = malloc(1025);
+	ssize_t from_fd, to_fd, read_len, write_len;
+	char *buffer = malloc(1024);
 
-	from_file = open(file_from, O_RDONLY);
-	to_file = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	from_fd = open(file_from, O_RDONLY);
+	if (from_fd == -1)
+	{
+		dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", file_from);
+		return (98);
+	}
+
+	to_fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	do {
-		read_len = read(from_file, buffer, 1024);
-		if (from_file == -1 || read_len == -1)
-		{
-			dprintf(STDERR_FILENO,
-				"Error: Can't read from file %s\n", file_from);
-			return (98);
-		}
+		read_len = read(from_fd, buffer, 1024);
 
-		write_len = write(to_file, buffer, strlen(buffer));
-		if (to_file == -1 || write_len == -1)
+		write_len = write(to_fd, buffer, read_len);
+		if (to_fd == -1 || write_len == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to 	%s\n", file_to);
 			return (99);
 		}
-	} while (strlen(buffer) == 1024);
+		/* fflush(buffer); */
+	} while (read_len >= 1024);
 
-	if (close(from_file))
+	if (close(from_fd))
 	{
 		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %li\n", from_file);
+			"Error: Can't close fd %li\n", from_fd);
 		return (100);
 	}
-	if (close(to_file))
+	if (close(to_fd))
 	{
 		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %li\n", to_file);
+			"Error: Can't close fd %li\n", to_fd);
 		return (100);
 	}
 	free(buffer);
+	(void) read_len;
 	return (0);
 }
 
-/* ssize_t read */
+
