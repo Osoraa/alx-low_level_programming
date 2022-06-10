@@ -32,17 +32,16 @@ int _cp(char *file_from, char *file_to)
 	char *buffer = malloc(1024);
 
 	from_fd = open(file_from, O_RDONLY);
-	if (from_fd == -1)
-	{
-		dprintf(STDERR_FILENO,
-			"Error: Can't read from file %s\n", file_from);
-		return (98);
-	}
-
 	to_fd = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 
 	do {
 		read_len = read(from_fd, buffer, 1024);
+		if (from_fd == -1 || read_len == -1)
+		{
+			dprintf(STDERR_FILENO,
+				"Error: Can't read from file %s\n", file_from);
+			return (98);
+		}
 
 		write_len = write(to_fd, buffer, read_len);
 		if (to_fd == -1 || write_len == -1)
@@ -51,8 +50,7 @@ int _cp(char *file_from, char *file_to)
 				"Error: Can't write to %s\n", file_to);
 			return (99);
 		}
-		/* fflush(buffer); */
-	} while (read_len >= 1024);
+	} while (read_len == 1024);
 
 	if (close(from_fd))
 	{
@@ -67,7 +65,6 @@ int _cp(char *file_from, char *file_to)
 		return (100);
 	}
 	free(buffer);
-	(void) read_len;
 	return (0);
 }
 
