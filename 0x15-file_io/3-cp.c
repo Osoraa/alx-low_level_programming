@@ -34,7 +34,8 @@ int _cp(char *file_from, char *file_to)
 	from_fd = open(file_from, O_RDONLY);
 	if (from_fd == -1)
 	{
-		dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO,
+			"Error: Can't read from file %s\n", file_from);
 		return (98);
 	}
 
@@ -47,7 +48,7 @@ int _cp(char *file_from, char *file_to)
 		if (to_fd == -1 || write_len == -1)
 		{
 			dprintf(STDERR_FILENO,
-				"Error: Can't write to 	%s\n", file_to);
+				"Error: Can't write to %s\n", file_to);
 			return (99);
 		}
 		/* fflush(buffer); */
