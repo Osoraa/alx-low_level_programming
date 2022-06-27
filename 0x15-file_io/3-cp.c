@@ -67,5 +67,3 @@ int _cp(char *file_from, char *file_to)
 	free(buffer);
 	return (0);
 }
-
-
