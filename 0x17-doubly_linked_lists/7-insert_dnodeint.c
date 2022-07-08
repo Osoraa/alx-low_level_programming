@@ -12,10 +12,14 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *node, *current;
+	size_t list_len = dlistint_len(*h);
 
 	/* Return NULL if index specified not in list */
-	if (idx >= dlistint_len(*h))
+	if (idx > list_len)
 		return (NULL);
+
+	if (idx == list_len)
+		return (add_dnodeint_end(h, n));
 
 	/* Create new node */
 	node = malloc(sizeof(dlistint_t));
@@ -49,7 +53,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	return (node);
 }
-
 
 /**
  * dlistint_len - Counts the number of elements in a doubly linked list
