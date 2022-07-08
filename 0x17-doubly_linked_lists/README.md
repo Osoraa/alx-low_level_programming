@@ -9,6 +9,7 @@ The `tests/` folder contains test cases for the solution files. You could either
 ``` C
 Usage:
 $ gcc [-desired-flags] *-test.c *<filename.c> -o [output-file]
+$
 ```
 
 or leave the testcases in the test folder but make sure to edit the `#include` path to reference the actual location of the `lists.h` header file.
@@ -18,12 +19,14 @@ Then compile with:
 ``` C
 Usage:
 $ gcc [-desired-flags] tests/*-test.c *<filename.c> -o [output-file]
+$
 ```
 
 Run the compilation output with:
 
 ``` C
 $ ./<output-file>
+$
 ```
 
 ### Strategy
