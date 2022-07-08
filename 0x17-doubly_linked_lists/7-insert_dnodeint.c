@@ -35,12 +35,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		current->prev->next = node;
 		node->prev = current->prev;
-	} else   /* If index is zero*/
+	} else   /* If index is zero */
 	{
 		*h = node;
 		node->prev = NULL;
 	}
-	/* Universal case */
+	/* Base case, i.e. whether index is zero or not */
 	node->next = current;
 	current->prev = node;
 
