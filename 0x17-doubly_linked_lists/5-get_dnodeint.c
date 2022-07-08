@@ -6,7 +6,7 @@
  * @head: List beginning.
  * @index: Location of node to get.
  *
- * Return 
+ * Return: Node at specified index, else NULL
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
