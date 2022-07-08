@@ -18,7 +18,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (idx > list_len)
 		return (NULL);
 
-	if (idx == list_len)
+	/* Add node as normal if empty node or index is the end */
+	if (!(*h) || idx == list_len)
 		return (add_dnodeint_end(h, n));
 
 	/* Create new node */
@@ -26,14 +27,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (!node)
 		return (NULL);
 	node->n = n;
-
-	/* Add node as normal if empty node */
-	if (!(*h))
-	{
-		*h = node;
-		node->next = node->prev = NULL;
-		return (node);
-	}
 
 	/* Get existing node at index */
 	current = get_dnodeint_at_index(*h, idx);
