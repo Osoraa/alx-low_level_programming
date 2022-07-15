@@ -17,11 +17,9 @@ int (*get_op_func(char *s))(int, int)
 	    {NULL, NULL}};
 	int i = 0;
 
-	printf("lmao");
-
-	while (ops[i].op && ops[i].f)
+	while (ops[i].op)
 	{
-		if (s == ops[i].op)
+		if (*s == *(ops[i].op))
 			return (ops[i].f);
 		i++;
 	}
