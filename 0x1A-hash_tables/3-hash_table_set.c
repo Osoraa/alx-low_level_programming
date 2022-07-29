@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	size_t index;
-	hash_node_t *node;
+	hash_node_t *node, *location;
 
 	/* Validate input */
 	if (!ht || !key || !value)
@@ -20,6 +20,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* Get key index */
 	index = key_index((unsigned char *) key, ht->size);
+	location = ht->array[index];
+
+	/* If node is present in index, modify it */
+	while (location)
+	{
+		if (!(strcmp(location->key, key)))
+		{
+			location->value = strdup(value);
+			return (1);
+		}
+		location = location->next;
+	}
 
 	/* Create hash node */
 	node = malloc(sizeof(hash_node_t));
