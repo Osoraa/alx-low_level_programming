@@ -20,8 +20,10 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	/* Find key index */
 	index = key_index((unsigned char *) key, ht->size);
 
+	location = ht->array[index];
+
 	/* Return NULL on empty index */
-	if (!(location = ht->array[index]))
+	if (!location)
 		return (NULL);
 
 	/* Return node value if key in index else return NULL */
