@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	/* Return Error if dividing(or modding) by 0 */
+	/* Return Error if dividing/modding by 0 */
 	if (num2 == 0 && (!strcmp(op, "/") || !strcmp(op, "%")))
 	{
 		printf("Error\n");
