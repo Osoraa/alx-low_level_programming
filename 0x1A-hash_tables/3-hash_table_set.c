@@ -14,18 +14,23 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	size_t index;
 	hash_node_t *node;
 
-	if (!ht || !key || !value)
+	/* Validate input */
+	if (!ht || !key || value == NULL)
 		return (0);
 
+	/* Get key index */
 	index = key_index((unsigned char *) key, ht->size);
 
+	/* Create hash node */
 	node = malloc(sizeof(hash_node_t));
 	if (!node)
 		return (0);
 
+	/* Populate node with values */
 	node->key = strdup(key);
 	node->value = strdup(value);
 
+	/* Insert node in hashtable */
 	node->next = ht->array[index];
 	ht->array[index] = node;
 
