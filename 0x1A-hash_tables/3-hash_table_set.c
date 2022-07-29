@@ -3,7 +3,7 @@
 /**
  * hash_table_set - Adds an element to a hashtable.
  *
- * @ht: Pointer to hashtable.
+ * @ht: Hashtable.
  * @key: Hash key.
  * @value: Hash value.
  *
@@ -15,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *node;
 
 	/* Validate input */
-	if (!ht || !key || value == NULL)
+	if (!ht || !key || !value)
 		return (0);
 
 	/* Get key index */
