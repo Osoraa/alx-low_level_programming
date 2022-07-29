@@ -2,11 +2,11 @@
 
 /**
  * hash_table_set - Adds an element to a hashtable.
- * 
+ *
  * @ht: Pointer to hashtable.
  * @key: Hash key.
  * @value: Hash value.
- * 
+ *
  * Return: 1 on successful add, 0 otherwise.
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
