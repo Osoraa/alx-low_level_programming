@@ -11,14 +11,27 @@
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
 	size_t index;
+	hash_node_t *location;
 
+	/* Validates parameters */
 	if (!ht || !key)
 		return (NULL);
 
+	/* Find key index */
 	index = key_index((unsigned char *) key, ht->size);
 
-	if (!(ht->array[index]))
+	/* Return NULL on empty index */
+	if (!(location = ht->array[index]))
 		return (NULL);
 
-	return (ht->array[index]->value);
+	/* Return node value if key in index else return NULL */
+	while (location)
+	{
+		if (!(strcmp(location->key, key)))
+			return (location->value);
+
+		location = location->next;
+	}
+
+	return (NULL);
 }

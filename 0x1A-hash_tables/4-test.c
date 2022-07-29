@@ -10,7 +10,7 @@ int main(void)
 	hash_table_t *ht;
 	char *value;
 
-	ht = hash_table_create(1024);
+	/* ht = hash_table_create(1024);
 	hash_table_set(ht, "c", "fun");
 	hash_table_set(ht, "python", "awesome");
 	hash_table_set(ht, "Bob", "and Kris love asm");
@@ -36,5 +36,25 @@ int main(void)
 	printf("%s:%s\n", "c", value);
 	value = hash_table_get(ht, "javascript");
 	printf("%s:%s\n", "javascript", value);
+	return (EXIT_SUCCESS); */
+
+	ht = hash_table_create(30);
+	hash_table_set(ht, "USA", "Washington");
+	hash_table_set(ht, "France", "Paris");
+	hash_table_set(ht, "UK", "London");
+	hash_table_set(ht, "Spain", "Madrid");
+	hash_table_set(ht, "Germany", "Berlin");
+	hash_table_set(ht, "China", "Beijing");
+	hash_table_set(ht, "Russia", "Moscow");
+	hash_table_set(ht, "Bahrain", "Manama");
+	hash_table_set(ht, "Canada", "Ottawa");
+	hash_table_set(ht, "Brazil", "Brasilia");
+	hash_table_set(ht, "Sweden", "Stockholm");
+	hash_table_set(ht, "Iceland", "Reykjavik");
+	hash_table_set(ht, "Japan", "Tokyo");
+	hash_table_set(ht, "Australia", "Canberra");
+
+	value = hash_table_get(ht, "Australia");
+	printf("%s:%s\n", "Australia", value);
 	return (EXIT_SUCCESS);
 }
