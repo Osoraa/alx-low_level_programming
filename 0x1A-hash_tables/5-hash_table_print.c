@@ -4,6 +4,7 @@
  * hash_table_print - Prints the contents of a hash table.
  * @ht: Hashtable.
  *
+ * Return: None.
  */
 void hash_table_print(const hash_table_t *ht)
 {
@@ -18,7 +19,7 @@ void hash_table_print(const hash_table_t *ht)
 		if (ht->array[size])
 		{
 			if (count)
-				printf(", ");
+				printf(", ");	/* After first print */
 			print_list(ht->array[size]);
 			count++;
 		}
@@ -27,14 +28,20 @@ void hash_table_print(const hash_table_t *ht)
 	printf("}\n");
 }
 
-void print_list(hash_node_t *location)
+/**
+ * print_list - Prints the contents of a hash table.
+ * @node: Index head.
+ *
+ * Return: None.
+ */
+void print_list(hash_node_t *node)
 {
-	while (location)
+	while (node)
 	{
-		printf("'%s': '%s'", location->key, location->value);
-		if (location->next)
-			printf(", ");
+		printf("'%s': '%s'", node->key, node->value);
+		if (node->next)
+			printf(", ");	/* If there's another node */
 
-		location = location->next;
+		node = node->next;
 	}
 }
