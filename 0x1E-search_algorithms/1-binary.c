@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * binary_search - Searches for a value in a sorted array using the binary search algo.
+ * binary_search - Binary search algo.
  *
  * @array: Array of integers in which to search for value.
  * @size: Size of the array of integers.
@@ -36,7 +36,7 @@ int binary_search(int *array, size_t size, int value)
 
 		/* If value is the mid element, return index */
 		if (array[size - 1] == value)
-			return (int) (index + size - 1);
+			return ((int) (index + size - 1));
 
 		/* If mid is less than the value, then search right array */
 		if (array[size - 1] < value)
